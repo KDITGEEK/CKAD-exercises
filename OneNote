@@ -1725,27 +1725,49 @@ Q3 			Not working; Check Container logs
 Application Design and Build (20%)
 - you’ll be required to design, build, and modify container images in a Kubernetes cluster. 
 You may also be asked to create a single and/or multi-container pod, utilize persistent and ephemeral volumes, and create jobs.
+• Define, build and modify container images
+• Understand Jobs and CronJobs
+• Understand multi-container Pod designpatterns (e.g. sidecar, init and others)
+• Utilize persistent and ephemeral volumes
 https://kubernetes.io/docs/concepts/storage/volumes/
 
 Application Deployment (20%)
 -This section of the curriculum is centered around your testing your knowledge of deploying in Kubernetes. From understanding how to perform rolling updates to using Helm to deploy existing packages and the ability to use deployment strategies like the blue/green and canary.
+• Use Kubernetes primitives to implement common deployment strategies (e.g. blue/green or canary)
+• Understand Deployments and how to perform rolling updates
+• Use the Helm package manager to deploy existing packages
 https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 https://blog.getambassador.io/cloud-native-patterns-canary-release-1cb8f82d371a
 
 Application Observability and maintenance (15%)
 This part of the curriculum aims to make you understand API deprecations and debugging in Kubernetes. It also covers how to implement probes and health checks to be able to monitor your Kubernetes applications.
+• Understand API deprecations
+• Implement probes and health checks
+• Use provided tools to monitor Kubernetes applications
+• Utilize container logs
+• Debugging in Kubernetes
 https://blog.getambassador.io/debugging-and-fixing-kubernetes-apps-during-the-ckad-exam-1b22ff4f2da1
 https://kubernetes.io/docs/tasks/tools/included/kubectl-convert-overview/
 https://thenewstack.io/kubernetes-health-checks-using-probes/
 
 Application Environment, Configuration, and Security (25%)
 You should be able to discover and use resources that extend Kubernetes (CRD) and understand authentication, authorization, and admission control. In addition to that, you should also understand ConfigMaps, secrets, ServiceAccounts, and SecurityContexts.
+• Discover and use resources that extend Kubernetes (CRD)
+• Understand authentication, authorization and admission control
+• Understanding and defining resource requirements, limits and quotas
+• Understand ConfigMaps
+• Create & consume Secrets
+• Understand ServiceAccounts
+• Understand SecurityContexts
 https://dzone.com/articles/understanding-and-building-kubernetes-custom-resou
 https://kubernetes.io/docs/concepts/configuration/
 https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 
 Services and Networking (20%)
 Here, you are supposed to demonstrate a basic understanding of Network Policies, be able to provide and troubleshoot access to applications via services and use Ingress rules to expose applications.
+• Demonstrate basic understanding of NetworkPolicies
+• Provide and troubleshoot access to applications via services
+• Use Ingress rules to expose applications
 https://blog.getambassador.io/getting-started-with-kubernetes-ingress-controllers-f3b669d19b31
 https://kubernetes.io/docs/concepts/services-networking/network-policies/
 https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/
