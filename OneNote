@@ -1658,6 +1658,94 @@ alias k=kubectl; alias kg='k get'; alias kgpo='kg po'; alias kgno='kg no'; alias
 alias kdf='k delete -f'; alias kdes='k describe'; alias klog='k logs'; 
 alias c=clear; source <(kubectl completion bash); complete -F __start_kubectl k;
 
+*[XI. miscellaneous]
+
+K8s shortcut/aliases
+====================
+po rs deploy svc ns netpol pvc sa
+
+VIM shortcut
+===========
+Modes: Normal, Insert, Visual, Replace
+
+Normal mode:
+character jump key  : hjkl (<V^>)
+motion key:   web$0 (WB, WE, W<-, EOL, BOL)
+File key : gg G (BOF, EOF)
+Search: /, ?, :, f <char>
+Search and replace with confirmation:%s/t1/t2/gc 
+repeate previous operation: . (dot)
+Operators: cdy p ci{ ca{
+
+
+Insert mode: iaos (after) | IAOS (before) 
+
+Visual mode: shift+v + j or k, visual block:  Ctrl+v, Diff shift+v vs ctrl+v
+Task: insert all before line in block: Ctrl+v+I+<typing...>+ Escape
+
+sudo -i
 vim ~/.vimrc
 // input this
+:: set autoindent
+:set sw=2 ts=2 sts=2 et
+
+You only need to do this once at the very beginning of the exam after you switch to root with sudo -i
+Edit your ~/.vimrc file
+
+***If you already have some yaml written, you can select it (with V for line-wise selection then use j or k to select more lines) 
+then trigger the vim formatting with =
+:set autoindent
+shift + > or < for tab
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+IMPORTANT
+///***EXTRA EDGE TO PASS CKAD 2022 EXAM
+It is a hands-on exam with 19 questions of 2 hours to complete and a score of 66%, care for weught % of questions
+It is advisable to read, practice and ensure you have the knowledge required to design, build, deploy, and configure cloud native applications for Kubernetes before taking the CKAD exam.
+
+https://www.linkedin.com/pulse/how-score-over-90-certified-kubernetes-application-exam-jackson/
+https://github.com/dgkanatsios/CKAD-exercises
+
+Editor tab space settings
+sudo -i
+vim ~/.vimrc
+set autoindent
 set sw=2 ts=2 sts=2 et
+
+Use the Notepad
+Question 10) Working but check the result
+Question 12) Skipped!
+Question 13) Not working; Check Container logs
+
+Questions	wait% 	Status -> Next action
+Q1 			Working but check the result
+Q2 			Skipped!
+Q3 			Not working; Check Container logs
+
+Application Design and Build (20%)
+- you’ll be required to design, build, and modify container images in a Kubernetes cluster. 
+You may also be asked to create a single and/or multi-container pod, utilize persistent and ephemeral volumes, and create jobs.
+https://kubernetes.io/docs/concepts/storage/volumes/
+
+Application Deployment (20%)
+-This section of the curriculum is centered around your testing your knowledge of deploying in Kubernetes. From understanding how to perform rolling updates to using Helm to deploy existing packages and the ability to use deployment strategies like the blue/green and canary.
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+https://blog.getambassador.io/cloud-native-patterns-canary-release-1cb8f82d371a
+
+Application Observability and maintenance (15%)
+This part of the curriculum aims to make you understand API deprecations and debugging in Kubernetes. It also covers how to implement probes and health checks to be able to monitor your Kubernetes applications.
+https://blog.getambassador.io/debugging-and-fixing-kubernetes-apps-during-the-ckad-exam-1b22ff4f2da1
+https://kubernetes.io/docs/tasks/tools/included/kubectl-convert-overview/
+https://thenewstack.io/kubernetes-health-checks-using-probes/
+
+Application Environment, Configuration, and Security (25%)
+You should be able to discover and use resources that extend Kubernetes (CRD) and understand authentication, authorization, and admission control. In addition to that, you should also understand ConfigMaps, secrets, ServiceAccounts, and SecurityContexts.
+https://dzone.com/articles/understanding-and-building-kubernetes-custom-resou
+https://kubernetes.io/docs/concepts/configuration/
+https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+
+Services and Networking (20%)
+Here, you are supposed to demonstrate a basic understanding of Network Policies, be able to provide and troubleshoot access to applications via services and use Ingress rules to expose applications.
+https://blog.getambassador.io/getting-started-with-kubernetes-ingress-controllers-f3b669d19b31
+https://kubernetes.io/docs/concepts/services-networking/network-policies/
+https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/
